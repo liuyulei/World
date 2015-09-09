@@ -9,9 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class SecondActivity extends Activity {
+public class SecondActivity extends Activity implements View.OnClickListener{
 
     private Button backBtn ;
+    private Button newbackBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,16 @@ public class SecondActivity extends Activity {
 
             }
         });
+        newbackBtn =(Button)this.findViewById(R.id.secondback);
+        newbackBtn.setOnClickListener(this);
     }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.secondback:
+                finish();
+                break;
+        }
+    }
 }

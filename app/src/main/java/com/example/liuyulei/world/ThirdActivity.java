@@ -1,6 +1,7 @@
 package com.example.liuyulei.world;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -36,6 +37,10 @@ public class ThirdActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                Toast.makeText(ThirdActivity.this,"AA+"+i,1).show();
+                if (i == 0){
+                    Intent intent = new Intent(ThirdActivity.this,FourActivity.class);
+                    startActivity(intent);
+                }
             }
         });
     }
@@ -45,6 +50,7 @@ public class ThirdActivity extends Activity {
         for (int i=0; i<20; i++){
             list.add("BBBBBBB+"+(i+1));
         }
+
         return list;
     }
 }
