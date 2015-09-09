@@ -22,7 +22,7 @@ public class SecondActivity extends Activity {
             @Override
             public void onClick(View view) {
 //                finish();
-                Toast.makeText(SecondActivity.this, "nihao", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SecondActivity.this, "nihaode", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(SecondActivity.this,ThirdActivity.class);
                 startActivity(intent);
 
